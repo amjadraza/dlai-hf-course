@@ -10,10 +10,10 @@ packages = [{include = "dlai-hf-course"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
-dotenv = "^0.0.5"
-transformers= "^4.31.0"
-gradio= "^3.39.0"
-jupyterlab= "^4.0.3"
+transformers = "^4.31.0"
+gradio = "^3.39.0"
+jupyterlab = "^4.0.3"
+python-dotenv = "^1.0.0"
 
 
 [build-system]

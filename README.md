@@ -1,39 +1,22 @@
 <h1 align="center">
-📖 EmbedChain-Streamlit-Docker App Template
+📖 DLAI HUGGINGFACE COURSE
 </h1>
 
-[![A Video Guide](ui.PNG?raw=true)](https://youtu.be/yJAWB13FhYQ)
+A collection of notebooks for the course DLAI HUGGINGFACE with local environment setup
 
-[https://youtu.be/yJAWB13FhYQ](https://youtu.be/yJAWB13FhYQ)
+<!-- [![A Video Guide](ui.PNG?raw=true)](https://youtu.be/yJAWB13FhYQ) -->
+
+<!-- [https://youtu.be/yJAWB13FhYQ](https://youtu.be/yJAWB13FhYQ) -->
 
 
 ## 🔧 Features
 
-- Basic Skeleton App configured with `openai` API
-- A ChatBot using embedchain and Streamlit
+- Collection of Notebooks
+- Local venev setup using Poetry
 - Docker Support with Optimisation Cache etc
-- Deployment on Streamlit Public Cloud
+- Run the Notebook Server with Docker
 
-This repo contains an `main.py` file which has a template for a chatbot implementation.
-
-## Example Input Data:
-
-Select the number of Data Sources from slider and enter the details.
-
-
-| Source    | URL |
-| -------- | ------- |
-| youtube  | https://www.youtube.com/watch?v=3qHkcs3kG44   |
-| pdf_file |https://navalmanack.s3.amazonaws.com/Eric-Jorgenson_The-Almanack-of-Naval-Ravikant_Final.pdf    |
-| web    | https://nav.al/feedback  |
-|qna_pair| "Who is Naval Ravikant?", "Naval Ravikant is an Indian-American entrepreneur and investor." |
-
-**Question:** What unique capacity does Naval argue humans possess when it comes to understanding explanations or concepts?
-
-
-## Adding your chain
-To add your chain, you need to change the `load_chain` function in `main.py`.
-Depending on the type of your chain, you may also need to change the inputs/outputs that occur later on.
+This repo contains an `notebooks` flocation contains the ntebooks
 
 
 ## 💻 Running Locally
@@ -41,7 +24,7 @@ Depending on the type of your chain, you may also need to change the inputs/outp
 1. Clone the repository📂
 
 ```bash
-git clone https://github.com/amjadraza/embedchain-streamlit-app.git
+git clone https://github.com/amjadraza/dlai-hf-course.git
 ```
 
 2. Install dependencies with [Poetry](https://python-poetry.org/) and activate virtual environment🔨
@@ -51,10 +34,12 @@ poetry install
 poetry shell
 ```
 
-3. Run the Streamlit server🚀
+3. Run the JupyterLab server🚀
 
 ```bash
-streamlit run app/main.py 
+
+jupyter lab
+
 ```
 
 Run App using Docker
@@ -65,27 +50,19 @@ https://medium.com/@albertazzir/blazing-fast-python-docker-builds-with-poetry-a7
 
 Build the docker container
 
-``docker  build . -t embedchain-streamlit-app:latest ``
+``docker  build . -t dlai-hf-course:latest ``
 
 To generate Image with `DOCKER_BUILDKIT`, follow below command
 
-```DOCKER_BUILDKIT=1 docker build --target=runtime . -t embedchain-streamlit-app:latest```
+```DOCKER_BUILDKIT=1 docker build --target=runtime . -t dlai-hf-course:latest```
 
 1. Run the docker container directly 
 
-``docker run -d --name embedchain-streamlit-app -p 8080:8080 embedchain-streamlit-app:latest ``
+``docker run -d --name dlai-hf-course -p 8080:8080 dlai-hf-course:latest ``
 
 2. Run the docker container using docker-compose (Recommended)
 
 ``docker-compose up``
-
-
-Deploy App on Streamlit Public Cloud
-------------------------------------
-This app can be deployed on Streamlit Public Cloud using GitHub. Below is the Link to 
-Publicly deployed App
-
-https://embedchain.streamlit.app/
 
 
 

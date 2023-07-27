@@ -1,10 +1,10 @@
 version: '3'
 services:
   langchain-chat-app:
-    image: embedchain-streamlit-app:latest
+    image: dlai-hf-course:latest
     build: ./app
-    command: streamlit run demo_app/main.py --server.port 8080
+    command: jupyter lab --port 8888
     volumes:
-      - ./demo_app/:/app/demo_app
+      - ./notebooks/:/app/notebooks
     ports:
-      - 8080:8080
+      - 8888:8888
