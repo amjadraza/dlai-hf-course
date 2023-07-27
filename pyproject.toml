@@ -1,17 +1,19 @@
 [tool.poetry]
-name = "embedchain-streamlit-app"
-version = "0.1.0"
-description = "A template embedchain Streamlit App with Docker"
+name = "dlai-hf-course"
+version = "0.0.1"
+description = "A Project with learning resource on DLAI HUGGINGFACE Course"
 authors = ["Amjad Raza"]
 license = "MIT"
 readme = "README.md"
-packages = [{include = "embedchain-streamlit-app"}]
+packages = [{include = "dlai-hf-course"}]
 
 
 [tool.poetry.dependencies]
 python = "^3.10"
-embedchain = "0.0.11"
-streamlit = "^1.24.0"
+dotenv = "^0.0.5"
+transformers= "^4.31.0"
+gradio= "^3.39.0"
+jupyterlab= "^4.0.3"
 
 
 [build-system]
