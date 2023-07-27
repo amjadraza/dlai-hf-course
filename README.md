@@ -68,7 +68,7 @@ To generate Image with `DOCKER_BUILDKIT`, follow below command
 
 ## Report Feedbacks
 
-As `embedchain-streamlit-app:latest` is a template project with minimal example. Report issues if you face any. 
+As `dlai-hf-course:latest` is a template project with minimal example. Report issues if you face any. 
 
 ## DISCLAIMER
 
