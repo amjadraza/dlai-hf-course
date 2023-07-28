@@ -11,8 +11,8 @@ ENV POETRY_NO_INTERACTION=1 \
     POETRY_CACHE_DIR=/tmp/poetry_cache
 
 ENV HOST=0.0.0.0
-ENV LISTEN_PORT 8888
-EXPOSE 8888
+ENV LISTEN_PORT 8080
+EXPOSE 8080
 
 WORKDIR /app
 
@@ -30,4 +30,4 @@ COPY --from=builder ${VIRTUAL_ENV} ${VIRTUAL_ENV}
 
 COPY ./notebooks ./notebooks
 
-CMD ["jupyter", "lab"]
+CMD ["jupyter", "lab", "--port", "8080"]

@@ -14,6 +14,7 @@ transformers = "^4.31.0"
 gradio = "^3.39.0"
 jupyterlab = "^4.0.3"
 python-dotenv = "^1.0.0"
+text-generation = "^0.6.0"
 
 
 [build-system]
