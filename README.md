@@ -34,13 +34,21 @@ poetry install
 poetry shell
 ```
 
-3. Run the JupyterLab server🚀
+3. Copy and Modify `env.example` to `.env`
+
+Generate the HF API Key to be able to hosted models for inference and set the variables accordingly.
+
+4. Run the JupyterLab server🚀
 
 ```bash
 
 jupyter lab
 
 ```
+
+
+
+
 
 Run App using Docker
 --------------------
