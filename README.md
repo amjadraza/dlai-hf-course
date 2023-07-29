@@ -47,11 +47,8 @@ jupyter lab
 ```
 
 
-
-
-
-Run App using Docker
---------------------
+Run Notebooks using Docker
+--------------------------
 This project includes `Dockerfile` to run the app in Docker container. In order to optimise the Docker Image
 size and building time with cache techniques, I have follow tricks in below Article 
 https://medium.com/@albertazzir/blazing-fast-python-docker-builds-with-poetry-a78a66f5aed0
