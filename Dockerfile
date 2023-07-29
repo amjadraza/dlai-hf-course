@@ -22,10 +22,9 @@ FROM python:3.11-buster as runtime
 ENV VIRTUAL_ENV=/app/.venv \
     PATH="/app/.venv/bin:$PATH"
 
-COPY --from=builder ${VIRTUAL_ENV} ${VIRTUAL_ENV}
+COPY --chown=daemon:daemon --from=builder ${VIRTUAL_ENV} ${VIRTUAL_ENV}
 
-COPY ./notebooks ./app/notebooks
+COPY --chown=daemon:daemon ./notebooks ./app/notebooks
 
-USER 1001
 EXPOSE 8888
 CMD ["jupyter", "lab", "--ip='0.0.0.0'", "--port=8888", "--no-browser", "--allow-root"]

@@ -1,12 +1,16 @@
 version: '3'
 services:
-  langchain-chat-app:
+  dlai-hf-notebook:
     image: dlai-hf-course:latest
     env_file:
     - .env
     build: ./app
-    command: jupyter lab --ip=0.0.0.0 --port=8888 --no-browser --allow-root 
-    volumes:
-      - ./notebooks/: /app/notebooks
+    command: jupyter lab --ip=0.0.0.0 --port=8888 --no-browser --allow-root
     ports:
-      - 8888:8888
+      - "8888:8888" 
+    volumes:
+      - ./notebooks/:/app/notebooks
+
+volumes:
+      notebooks:
+    

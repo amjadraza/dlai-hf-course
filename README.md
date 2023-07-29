@@ -63,11 +63,13 @@ To generate Image with `DOCKER_BUILDKIT`, follow below command
 
 1. Run the docker container directly 
 
-``docker run -d --name dlai-hf-course -p 8080:8080 dlai-hf-course:latest ``
+``docker run -d --name dlai-hf-course -p 8888:8888 dlai-hf-course:latest ``
 
 2. Run the docker container using docker-compose (Recommended)
 
 ``docker-compose up``
+
+> Make sure to include the `.env` SECRETS file when running with `docker-compose` with your own Keys.
 
 
 
